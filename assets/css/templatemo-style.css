@@ -8,12 +8,28 @@ https://templatemo.com/tm-531-reflux
 
 @import url(fontawesome.css);
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+:root {
+    --page-bg: #17202a;
+    --sidebar-bg: #1f6f78;
+    --sidebar-bg-dark: #16545d;
+    --accent: #d6a94a;
+    --accent-dark: #b98a2f;
+    --surface: #f8fafc;
+    --surface-soft: rgba(248, 250, 252, 0.12);
+    --surface-border: rgba(248, 250, 252, 0.22);
+    --text-light: #f8fafc;
+    --text-muted: #d7dee8;
+    --text-dark: #1f2933;
+    --text-soft-dark: #536170;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
 
 #page-wraper {
-    background: url(../images/page-bg.jpg) no-repeat center center fixed;
+    background: linear-gradient(135deg, var(--page-bg) 0%, #22313f 48%, #263238 100%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -42,13 +58,13 @@ a:hover {
 p {
     font-size: 16px;
     line-height: 24px;
-    color: #fff;
+    color: var(--text-muted);
 }
 
 h4 {
     font-size: 26px;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-light);
     letter-spacing: 0.25px;
 }
 
@@ -108,7 +124,7 @@ html {
 }
 
 .main-nav li:last-child a {
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid var(--surface-border);
 }
 
 .main-nav li {
@@ -121,16 +137,16 @@ html {
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-light);
     width: 100%;
     transition: all 0.5s;
-    border-top: 2px solid #fff;
+    border-top: 1px solid var(--surface-border);
 }
 
 .main-nav li:hover a,
 .main-nav li.active a {
-    background: #fff;
-    color: #1396B0;
+    background: var(--surface);
+    color: var(--sidebar-bg-dark);
 }
 
 /* Sidebar Menu */
@@ -157,7 +173,7 @@ html {
 .menu .author-content span {
     font-size: 13px;
     font-style: italic;
-    color: #fff;
+    color: var(--text-muted);
 }
 
 .menu .social-network {
@@ -174,15 +190,15 @@ html {
     display: inline-block;
     text-align: center;
     line-height: 40px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
+    background-color: rgba(15, 23, 42, 0.22);
+    color: var(--text-light);
     font-size: 14px;
     transition: all 0.5s;
 }
 
 .menu .social-network ul li a:hover {
-    background-color: #fff;
-    color: #F5754E;
+    background-color: var(--surface);
+    color: var(--sidebar-bg-dark);
 }
 
 .menu .copyright-text {
@@ -191,7 +207,7 @@ html {
 }
 
 .menu .copyright-text p {
-    border-top: 1px solid rgba(250, 250, 250, 0.1);
+    border-top: 1px solid var(--surface-border);
     display: inline-block;
     width: 100%;
     padding-left: 30px;
@@ -227,7 +243,7 @@ html {
     left: 10%;
   -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-overflow-scrolling: touch;
-  background-color: #17a2b8;
+  background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--sidebar-bg-dark) 100%);
   box-sizing: border-box;
   height: 100vh;  
   max-height: 100vh !important;
@@ -245,7 +261,7 @@ html {
 }
 
 .menu-toggle {
-  color: #fff;
+  color: var(--text-light);
   cursor: pointer;
   font-size: 25px;
   position: fixed;
@@ -259,8 +275,8 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    color: #F5754E;
-    background-color: #fff;
+    color: var(--accent);
+    background-color: var(--text-light);
     width: 60px;
     height: 60px;
     text-align: center;
@@ -275,8 +291,8 @@ html {
 #menu-close {
     cursor: pointer;
     text-align: right;
-    color: #F5754E;
-    background-color: #fff;
+    color: var(--accent);
+    background-color: var(--text-light);
     width: 100%;
     height: 60px;
     text-align: center;
@@ -288,14 +304,14 @@ html {
 /* Section */
 
 .section {
-    color: #fff;
+    color: var(--text-light);
     width: 55%;
     right: 10%;
     left: 35%;
     position: relative;
     min-height: 100vh;
     padding-bottom: 80px;
-    border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+    border-bottom: 1px solid var(--surface-border);
 }
 
 .section-heading {
@@ -306,20 +322,20 @@ html {
 .section-heading h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-light);
 }
 
 .section-heading .line-dec {
     width: 60px;
     height: 3px;
-    background-color: #1396B0;
+    background-color: var(--accent);
     margin: 10px auto;
 }
 
 .section-heading span {
     margin-top: 5px;
     font-size: 16px;
-    color: #fff;
+    color: var(--text-muted);
     letter-spacing: 0.5px;
 }
 
@@ -329,8 +345,8 @@ html {
 .white-button a {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #fff;
-    color: #F5754E;
+    background-color: var(--surface);
+    color: var(--sidebar-bg-dark);
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -339,15 +355,15 @@ html {
 }
 
 .white-button a:hover {
-    background-color: #F5754E;
-    color: #fff;
+    background-color: var(--accent);
+    color: var(--text-dark);
 }
 
 button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #F5754E;
+    background-color: var(--surface);
+    color: var(--sidebar-bg-dark);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -360,8 +376,8 @@ button {
 
 button:hover {
     outline: none;
-    background-color: #F5754E;
-    color: #fff;
+    background-color: var(--accent);
+    color: var(--text-dark);
 }
 
 
@@ -370,7 +386,7 @@ button:hover {
 .right-image-post {
     margin-top: 60px;
     padding-top: 60px;
-    border-top: 2px solid rgba(250, 250, 250, 0.1);
+    border-top: 1px solid var(--surface-border);
 }
 
 .left-image img,
@@ -404,8 +420,9 @@ button:hover {
 .service-item {
     margin-bottom: 10px;
     padding: 50px;
-    background-color: rgba(250, 250, 250, 0.1);
+    background-color: var(--surface-soft);
     transition: all 0.5s;
+    border: 1px solid var(--surface-border);
 }
 
 .service-item h4 {
@@ -417,15 +434,15 @@ button:hover {
 }
 
 .service-item:hover {
-    background-color: rgba(250, 250, 250, 1);
+    background-color: var(--surface);
 }
 
 .service-item:hover h4 {
-    color: #1e1e1e;
+    color: var(--text-dark);
 }
 
 .service-item:hover p {
-    color: #4a4a4a;
+    color: var(--text-soft-dark);
 }
 
 .service-item .service-icon {
@@ -501,8 +518,8 @@ section.my-work .section-heading {
 }
 
 .isotope-toolbar input[type="radio"]:checked + span {
-    color: #1396B0;
-    border-bottom: 2px solid #1396B0;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 .isotope-box {
@@ -516,19 +533,19 @@ section.my-work .section-heading {
 }
 
 .isotope-toolbar p {
-    border-top: 1px solid #fff;
+    border-top: 1px solid var(--surface-border);
     padding-top: 15px;
 }
 
 .isotope-toolbar a {
-    color: #fff;
+    color: var(--text-light);
 }
 
 .isotope-item {
     position: relative;
     width: 48%;
     margin: 1%;
-    border-bottom: 2px solid rgba(250,250,250,0.1);
+    border-bottom: 1px solid var(--surface-border);
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
@@ -576,28 +593,28 @@ figure.snip1321 figcaption {
 figure.snip1321 h4 {
     margin-top: 15px;
   margin-bottom: 5px;
-  color: #232323;
+  color: var(--text-dark);
 }
 figure.snip1321 span {
     font-size: 14px;
     font-style: italic;
     display: block;
-    color: #7a7a7a;
+    color: var(--text-soft-dark);
 }
 figure.snip1321 i {
   position: relative!important;
   font-size: 18px;
-  background-color: #F5754E;
+  background-color: var(--accent);
   width: 40px;
   height: 40px;
   display: inline-block;
   text-align: center;
   line-height: 40px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--text-dark);
 }
 figure.snip1321:after {
-  background-color: #ffffff;
+  background-color: var(--surface);
   position: absolute;
   content: "";
   display: block;
@@ -644,11 +661,11 @@ section.contact-me {
 }
 
 #contact input {
-    background-color: rgba(250,250,250,0.1);
-    border: 1px solid rgba(250,250,250,1);
+    background-color: var(--surface-soft);
+    border: 1px solid var(--surface-border);
     border-radius: 0px;
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--text-light);
     font-size: 14px;
     height: 40px;
     line-height: 40px;
@@ -662,11 +679,11 @@ section.contact-me {
 }
 
 #contact textarea {
-    background-color: rgba(250,250,250,0.1);
-    border: 1px solid rgba(250,250,250,1);
+    background-color: var(--surface-soft);
+    border: 1px solid var(--surface-border);
     border-radius: 0px;
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--text-light);
     font-size: 14px;
     height: 180px;
     max-height: 220px;
@@ -690,7 +707,7 @@ section.contact-me {
     }
 
     .section {
-        color: #fff;
+        color: var(--text-light);
         width: 65%;
         right: 5%;
         left: 30%;
